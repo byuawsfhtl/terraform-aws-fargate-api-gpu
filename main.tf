@@ -81,7 +81,7 @@ locals {
       resourceRequirements = [
         {
           type  = "GPU"
-          value = 1
+          value = "1"
         }
       ]
       ulimits = [
