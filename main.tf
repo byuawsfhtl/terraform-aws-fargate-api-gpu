@@ -78,6 +78,12 @@ locals {
         }
       ]
       volumesFrom = []
+      resourceRequirements = [
+        {
+          type  = "GPU"
+          value = 1
+        }
+      ]
       ulimits = [
         for ulimit in(def.ulimits != null ? def.ulimits : []) :
         {
