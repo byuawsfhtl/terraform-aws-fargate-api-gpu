@@ -112,11 +112,12 @@ locals {
         awslogs-stream-prefix = "${local.service_name}-xray"
       }
     }
-    environment = []
-    secrets     = []
-    mountPoints = []
-    volumesFrom = []
-    ulimits     = []
+    environment          = []
+    secrets              = []
+    mountPoints          = []
+    volumesFrom          = []
+    ulimits              = []
+    resourceRequirements = []
   }]
   container_definitions = var.xray_enabled == true ? concat(local.user_containers, local.xray_container) : local.user_containers
 
